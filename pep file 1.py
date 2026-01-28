@@ -1,0 +1,217 @@
+print("Hello world")
+
+# int
+reg_num = int("12314575")
+print(reg_num)
+
+# float
+cgpa = float("6.5")
+print(cgpa)
+
+# checking datatype
+print(type(cgpa))
+
+# if - else (age check)
+x = int(input("Enter your age: "))
+if x >= 18:
+    print("You are eligible")
+else:
+    print("You are not eligible")
+
+# check whether a number is even or odd
+y = int(input("Enter your number: "))
+if y % 2 == 0:
+    print("The given number is even")
+else:
+    print("The given number is odd")
+
+# grading system
+marks = int(input("Enter your marks: "))
+if marks >= 90:
+    print("Grade A")
+elif marks >= 75:
+    print("Grade B")
+elif marks >= 50:
+    print("Grade C")
+else:
+    print("Fail")
+#print the biggest of 2 numbers 
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+if a > b:
+    print(f"{a} is bigger") #(f"{a} printing variable a)
+elif b > a:
+    print(f"{b} is bigger")
+else:
+    print("Both are equal")
+# Traffic light
+color = input("Enter the color:")
+if color == "green" :
+    print("You can go")
+elif color == "yellow" :
+    print("Ready")
+elif color == "red" :
+    print("You can go")
+else:
+    print("Invalid input")
+
+# for loop
+for i in range(1,11):
+    print(i)
+
+#print all the odd numbers between 1 to 15
+for i in range(1,16):
+    if i % 2 != 0:
+        print(i)
+#print * pattern using for loop
+x = int(input("Enter the number of rows: "))
+for i in range(1, x + 1):
+    for j in range(i):
+        print("*", end="")
+    print()
+# print multiplication table using while loop 
+num = int(input("Enter the number: "))
+t = 1
+while t <= 10:
+    print(num, "x", t, "=", num * t)
+    t += 1
+# to print the same value again and again using a funtion 
+def greet():
+    print("Hello")
+    print("Welcome to Python programming")
+greet()
+greet()
+
+# addition of two numbers using a function
+def add(a, b):
+    return a + b
+result = add(5, 10)
+print("The sum is:", result)
+# lambda function
+add = lambda x, y: x + y
+print("The sum using lambda is:", add(7, 3))
+# square of any number using lambda function
+square = lambda x: x * x
+print("The square is:", square(6))
+
+# Q1) take imput print its type and then print double of it 
+value = input("Enter any value: ")
+print("The type is:", type(value))
+double_value = value * 2
+print("The double value is:", double_value)
+# Q2) take input salary as string then convert it to integer and add bonus of 5000 and print the final salary
+salary_str = input("Enter your salary: ")
+salary_int = int(salary_str)
+bonus = 5000
+final_salary = salary_int + bonus
+print("The final salary is:", final_salary)
+# Q3) temperature check 
+temp = input("Enter the temperature:")
+if temp >= 30:
+    print("Its hot today")
+elif temp >= 15:
+    print("Its normal today")
+else:
+    print("Its cold today")
+# Q4) print table of 7 and also count how many numbers are printed
+count = 0
+for i in range(1, 11):
+    print("7 x", i, "=", 7 * i)
+    count += 1
+print("Total numbers printed:", count)
+# Q5) take a number and reverse it and print it
+num = int(input("Enter a number: "))
+rev = 0
+while num > 0:
+    digit = num % 10
+    rev = rev * 10 + digit
+    num = num // 10
+print("The reversed number is:", rev)
+# Q6) check even odd using function
+n = int(input("Enter a number: "))
+def check_even_odd(n):
+    if n % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+result = check_even_odd(n)
+print("The number is", result)
+# Q7) Create a lambda function to return a cube of a number 
+cube = lambda x: x ** 3
+n = int(input("Enter a number :"))
+print("The cube is:", cube(n))
+marks = [10,20,30,40]
+print(marks[1])
+marks.append(100)
+print(marks)
+marks.insert(1,25)
+print(marks)
+marks.insert(3,75)
+print(marks)
+marks.remove(75)
+print(marks)
+marks.pop()
+print(marks)
+
+#list of ages
+age = [18,19,23,25,36]
+age.sort()
+print(age)
+age.reverse()
+print(age)
+print(len(age))
+print(max(age))
+print(min(age))
+print(sum(age))
+#to find the average of the ages
+print("The average age is:", sum(age)/len(age))
+#list of cities
+cities = ["Delhi","Mumbai","Chennai","Kolkata"]
+cities.sort()
+print(cities)
+cities.reverse()
+print(cities)
+cities.append("Banglore")
+print(cities)
+cities.insert(1,"Hyderabad")
+print(cities)
+cities.remove("Chennai")
+print(cities)
+cities.pop()
+print(cities)
+print(len(cities))
+#tuples of weekdays
+weekdays = ("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","Monday")
+print(weekdays)
+print(weekdays[2])
+print(len(weekdays))
+print(weekdays.count("Monday"))
+print(weekdays.index("Friday"))
+print(weekdays[1:4]) #slicing
+# tuple of 5 friends
+friends = ("Alice","Bob","Charlie","David","Eva")
+print(friends)
+print(friends[0])
+print(friends[-1])
+print(len(friends))
+print(friends.count("Bob"))
+print(friends.index("Charlie"))
+print(friends[1:4]) #slicing
+# sets 
+numbers = {10,20,30,40,10}
+print(numbers)
+for i in numbers:
+    print(i)
+numbers.add(100)
+numbers.update([120,130])
+numbers.remove(120)
+numbers.discard(120)
+numbers.remove(175) # will throw an error if element not found
+numbers.discard(175) # will not throw an error if element not found
+a = {1,2,3}
+b = {3,4,5}
+c = {1,2}
+print(a.union(b))
+print(a.intersection(b))
+print(c.issubset(a))
+print(a.issuperset(c))
