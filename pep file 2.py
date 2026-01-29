@@ -1,0 +1,329 @@
+#Dictionaries
+Student = {"name" : "Meenakshi","age":"19","city":"Eluru","course":"Python"}
+print(Student)
+print(Student["name"])
+print(Student.get("age"))
+print(Student.keys())
+print(Student.values())
+print(Student.items())
+Student["rollno"] = 29 #adding new key-value pair 
+print(Student) 
+Student["age"] = 20 #updating the age key-value 
+print(Student)
+Student.update({"age":21,"course":"Django"}) #updating multiple key-value pairs
+print(Student)
+Student.pop("city")
+Student.popitem() #removes the last inserted key-value pair
+print(Student)
+print(len(Student))
+dict1 = {"a":2,"b":3}
+dict2 = dict1.copy()
+print(dict2)
+dict1 = {"x":2,"y":3}
+dict2 = {"c":4,"d":5}
+dict1.update(dict2)
+print(dict1)
+print(dict1.clear()) #clears the dictionary
+print(dict1)
+dict = {"brand":"samsung","model":"galaxy","price":15000,"stock":20}
+print(dict["brand"])
+print(dict.get("model"))
+print(dict.keys())
+print(dict.values())
+print(dict.items())
+dict["color"] = "black"
+print(dict)
+dict["price"] = 14000
+print(dict)
+dict.update({"stock":25,"warranty":"1 year"})
+print(dict)
+print(dict.pop("color"))
+print(dict.popitem())
+print(dict)
+print(len(dict))
+
+#contact book 
+contact = {}
+while True:
+    print("\n-----contact book-----")
+    print("1.Add contact")
+    print("2.view contact")
+    print("search contact")
+    print("4.delete contact ")
+    print("5.exit")
+    choice = input("enter your choice here")
+    #for adding the contacts
+    if choice == "1":
+        name = input("Enter name:")
+        phone=input("Enter your phone number ")
+        contact[name] = phone
+        print("Contact added sucessfully")
+    #for view contact
+    elif choice == "2":
+        if contact:
+            print("\nsaved contact:")
+            for name,phone in contact.items():
+                print(name,":",phone)
+        else:
+            print("no contact found")
+    #for search contact
+    elif choice == "3":
+        name = input("Enter your name to search ")
+        if name in contact:
+            print("Phone number : ",contact[name])
+        else:
+            print("contact not found")
+    #delete contact
+    elif choice == "4":
+        name = input("Enter the name you want to delete:")
+        if name in contact:
+            del contact[name] #here we can also use pop() method (contact.pop(name))
+            print("contact deleted")
+        else:
+            print("contact not found")
+    #exit
+    elif choice == "5":
+        print("Exiting contact book")
+        break
+    else:
+        print("Invalid choice. Please try again.")
+
+#student record stystem
+student = {}
+while True:
+    print("\n-----Student record System-----")
+    print("1.Add student")
+    print("2.View students")
+    print("3.search student")
+    print("4.delete student")
+    print("5.exit")
+    choice = input("Enter your choice: ")
+    #for adding the student information
+    if choice == "1":
+        name = input("Enter student name :")
+        rollnum = input("Enter student rollnum: ")
+        course = input("Enter student course: ")
+        student[rollnum] = {
+            "name":name,
+            "course":course
+        }
+        print("Student information added successfully")
+    #for viewing the student information
+    elif choice == "2":
+        if student:
+            print("\n all Students:")
+            for rollnum,info in student.items():
+                print("roll:",rollnum)
+                print("name:",info["name"])
+                print("course:",info["course"])
+        else:
+            print("no student record found")
+    #for searching the student information  
+    elif choice == "3":
+        rollnum = input("Enter the roll number to search:")
+        if rollnum in student:
+            print("Name:",student[rollnum]["name"])
+            print("Course:",student[rollnum]["course"])
+        else:
+            print("student record not found")
+    #for deleting the student information
+    elif choice == "4":
+        rollnum = input("Enter the roll number to delete:")
+        removed = student.pop(rollnum, "not found")
+        if removed == "not found":
+            print("student record not found")
+        else:
+            print("student record deleted successfully")
+    #for exiting the student information system
+    elif choice == "5":
+        print("Thank you for using the student record system  ")
+        break
+    else:
+        print("Invalid choice")
+
+#String manipulation
+s = " Python Programming "
+print(len(s)) #length of string (conisders spaces)
+print(s[-1]) #indexing (last character)
+print(s[:4]) #slicing (first 4 characters)
+print(s[7:18]) #slicing from index 7 to 17
+print(s.lower()) #converts to lowercase
+print(s.upper()) #converts to uppercase
+print(s.strip()) #removes spaces from both ends
+print(s.replace("Python","Java")) #replaces Python with Java
+print(s.find("o")) #finds the index of first occurrence of 'o'
+print(s.split()) #splits the string into a list of words
+a = "abc"
+print(a.isalpha()) #checks if all characters are alphabetic
+print(a.isdigit()) #checks if all characters are digits
+b = "123"
+print(b.isdigit()) #checks if all characters are digits
+print(s.count("p")) #counts occurrences of 'p'
+print(s.startswith("Py")) #checks if string starts with 'Py'
+print(s.endswith("ing ")) #checks if string ends with 'ing '
+
+# String
+s = "Programming"
+# Two pointers
+start = 0
+end = len(s) - 1
+# Loop until pointers cross
+while start <= end:
+    print("Start:", s[start], "| End:", s[end])
+    start += 1
+    end -= 1
+# String to check
+s = "Programming"
+# Loop through each character in the string
+for i in s:
+# Check if character appears more than once
+    if s.count(i) > 1:
+        print(i)
+# Palindrome check
+word = input("Enter a word: ")
+rev = word[::-1]
+if word == rev:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+#two pointer approach
+word = input("Enter a word: ")
+start = 0
+end = len(word) - 1
+is_palindrome = True
+while start <= end:
+    if word[start] != word[end]:
+        is_palindrome = False
+        break
+    start += 1
+    end -= 1
+if is_palindrome:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+s = "apple"
+for ch in s:
+    print(ch,"i",s.count(ch))
+# Replace vowels with '*'
+s = "python"
+result = ""
+for ch in s:
+    if ch in "aeiou":
+        result+="*"
+    else:
+        result+=ch
+    print(result)
+
+#file handling
+#file = open("data.txt","mode=r,w,a") #basic file operations
+file = open("students.txt","w") #open file 
+file.write("Name: Meena\n") #write data to file
+file.write("course: Python\n")
+file.close()
+file = open("students.txt","r") #read file
+data = file.read()
+print(data)
+file.close()
+with open("students.txt","r") as file:
+    data = file.read()
+    print(data)
+file = open("students.txt","a") #append data to file 
+file.write("marks: 90\n")
+file.close()
+file = open("students.txt","r")
+data = file.readline() 
+data1 = file.readlines()
+print(data)
+print(data1) 
+
+file = open("data.txt","w")
+file.write("Name: meenakshi\n")
+file.write("City: Eluru\n")
+file.close()
+file = open("data.txt","r")
+data = file.read()
+with open("students.txt","r") as file:
+    data = file.read()
+    print(data)
+file = open("data.txt","a")
+file.write("Age: 19\n")
+file.close()
+file = open("students.txt","r")
+data = file.readlines()
+print("length of lines:",len(data))
+file.close()
+
+# create & write to file
+file = open("My name is Meenakshi.txt", "w")
+file.write("My name is Meenakshi")
+file.close()
+# read & print in uppercase
+file = open("My name is Meenakshi.txt", "r")
+data = file.read()
+print(data.upper())
+file.close()
+file = open("data.txt","r")
+data = file.read()
+print("characters in the file ",len(data))
+file.close()
+
+file = open("data.txt","r")
+data = file.read()
+words = data.split()
+print("Total words in a file are : ",len(words))
+file.close()
+file = open("data.txt","r")
+data = file.read()
+count = data.lower().count("meenakshi")
+print("word count",count)
+file.close()
+
+file = open("data.txt", "r")
+data = file.read()
+newname = data.replace("meenakshi", "Meena")
+print(newname)
+file.close()
+
+file = open("movies.txt","w")
+file.write("persuit of hapiness\n")
+file.write("inception\n")
+file.write("kgf\n")
+file.close()
+file = open("movies.txt","r")
+data = file.read()
+print(data[:10]) #print first 10 characters
+file.close()
+file = open("movies.txt","r")
+data = file.read()
+spaceless = data.replace(" ","")
+print(spaceless)
+file.close()
+file = open("My name is Meenakshi.txt","r")
+data = file.read()
+words = data.split()
+for word in words:
+    print(word[::-1]) #print each word reversed
+print(words[::-1]) #print words in reverse order
+file.close()
+
+#exceptions handling
+#try:
+    #risky code 
+#except:
+    #error handling code 
+try:
+    a = int(input("Enter first number:"))
+    b = int(input("Enter second number:"))
+    print(a/b)
+except:
+    print("Error occurred!!!!!!!")
+
+
+try:
+    file = open("movies1.txt","r")
+    print(file.read())
+except FileNotFoundError:
+    print("File not found")
+finally:
+    print("program ends")
