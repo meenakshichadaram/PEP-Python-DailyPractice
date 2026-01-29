@@ -1,4 +1,5 @@
 # PEP-Python-DailyPractice
+
 Day 1 – Python Basics (PEP Classes)
 
 On Day 1, I practiced and understood the fundamentals of Python programming, covering core concepts through hands-on examples and small problems.
@@ -52,6 +53,7 @@ Sets
 Unique elements, add/update/remove
 
 Set operations (union, intersection, subset, superset)
+
 Day 2 – Python Core Concepts Practice
 
 On Day 2, I practiced and implemented multiple Python core concepts with hands-on examples and mini projects to strengthen my fundamentals.
