@@ -1,21 +1,3 @@
-"""Create a Library Management System where different library items calculate borrowing charges differently.
-Library item (parent class)
-Book and magazie (child class)
-LibraryApp(main class)
-
-Book IS-A libraryitem
-Magazine IS-A libraryitem
-LibraryApp HAS-A libraryitem
-
-Output format
-Item Type: Book
-Borrow Days: 5
-Borrowing Charge: 50
-Or 
-Item Type: Magazine
-Borrow Days: 3
-Borrowing Charge: 30
-"""
 #------Library Management System using OOPS concepts-----
 #Abstraction
 class Libraryitem:                                                 # Parent class
@@ -61,5 +43,6 @@ app.show_details()
 app2 = LibraryApp()
 app2.create_item("Magazine", 3)
 app2.show_details()
+
 
 
