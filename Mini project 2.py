@@ -58,3 +58,4 @@ print("Salary:", app.get_salary())
 app2 = PayrollApp()
 print(app2.create_employee("PartTime"))
 print("Salary:", app2.get_salary())
+
