@@ -17,24 +17,31 @@ Borrow Days: 3
 Borrowing Charge: 30
 """
 #------Library Management System using OOPS concepts-----
-class Libraryitem:
+#Abstraction
+class Libraryitem:                                                 # Parent class
     def __init__(self,item_type,borrow_days):
         self.item_type = item_type
-        self.borrow_days = borrow_days
-    def calculate_borrowing_charge(self):
+        self.borrow_days = borrow_days                             # Encapsulation
+# Abstract Method
+    def calculate_borrowing_charge(self):                          
         pass
-class Book(Libraryitem):
+# Inheritance
+class Book(Libraryitem):                                           
     def __init__(self,item_type,borrow_days):
         super().__init__(item_type,borrow_days)
         self.borrow_days = borrow_days
+#Polymorphism
     def calculate_borrowing_charge(self):
         return self.borrow_days  * 10
-class Magzine(Libraryitem):
+ # Inheritance
+class Magzine(Libraryitem):                                       
     def __init__(self,item_type,borrow_days):
         super().__init__(item_type,borrow_days)
         self.borrow_days = borrow_days
+#Polymorphism
     def calculate_borrowing_charge(self):
         return self.borrow_days  * 10
+# HAS - A relationship
 class LibraryApp:
     def __init__(self):
         self.item = None
@@ -54,4 +61,5 @@ app.show_details()
 app2 = LibraryApp()
 app2.create_item("Magazine", 3)
 app2.show_details()
+
 
