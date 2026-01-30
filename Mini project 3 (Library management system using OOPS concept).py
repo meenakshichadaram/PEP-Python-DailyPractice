@@ -54,3 +54,4 @@ app.show_details()
 app2 = LibraryApp()
 app2.create_item("Magazine", 3)
 app2.show_details()
+
