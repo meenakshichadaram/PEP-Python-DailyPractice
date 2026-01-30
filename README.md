@@ -146,3 +146,108 @@ Handling runtime errors using try, except, and finally
 Handling file-related exceptions (FileNotFoundError)
 
 Preventing program crashes due to invalid input or missing files
+
+Day 3 – Practice Session (Python & Basics of DSA)
+🔹 Python Collections
+
+Created and iterated over lists
+
+Added elements using append()
+
+Calculated sum of list elements
+
+Reversed a list using slicing
+
+Removed duplicates from a list
+
+Accessed elements from a tuple
+
+Converted:
+
+List ↔ Tuple
+
+Tuple → List
+
+List → Set
+
+Dictionary → Set (keys only)
+
+Set → Dictionary using fromkeys()
+
+🔹 Exception Handling
+
+Learned different types of exceptions:
+
+ZeroDivisionError
+
+ValueError
+
+TypeError
+
+IndexError
+
+KeyError
+
+FileNotFoundError
+
+Used:
+
+try-except
+
+Multiple except blocks
+
+else block
+
+finally block
+
+Manually raised exceptions using raise
+
+Created custom exception (LowBalanceError)
+
+📌 Understood that finally always executes and can override return values.
+
+🔹 Python Behavior & Concepts
+
+Mutable vs Immutable objects
+
+Integers → immutable
+
+Lists → mutable
+
+Tuple modification using reassignment
+
+Set automatically removes duplicates
+
+Boolean arithmetic (True + True)
+
+String operations (+, *)
+
+for-else and while loop behavior
+
+🔹 Important Python Tricky Outputs
+
+finally block overrides return
+
+Nested try-except-finally execution order
+
+Exception re-raising using raise
+
+🔹 Problem Solving & DSA Basics
+
+Move all zeros to the end of an array
+
+Palindrome check using two-pointer approach
+
+Find the longest word in a sentence
+
+Subarray sum count (brute force)
+
+Two Sum problem
+
+Brute force approach
+
+Optimized two-pointer approach
+
+Fast & Slow Pointer (Tortoise and Hare) technique
+
+Used to find the middle element of a list
