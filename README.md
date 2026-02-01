@@ -251,3 +251,28 @@ Optimized two-pointer approach
 Fast & Slow Pointer (Tortoise and Hare) technique
 
 Used to find the middle element of a list
+
+Day 5 – Object-Oriented Programming (OOP) in Python
+In this practice session, I learned and implemented key Object-Oriented Programming (OOP) concepts in Python.
+
+What I Learned:
+
+How to create classes and objects and understand their relationship.
+
+The role of constructors (default and parameterized) in initializing objects.
+
+Difference between class attributes and object attributes.
+
+How to define methods for objects and static methods for classes.
+
+How to use mutable and immutable data structures in Python.
+
+The concept of encapsulation – hiding data using private variables and accessing them with getters and setters.
+
+Practical implementation through examples like Student, Car, Company, and Bank classes.
+
+How to update object attributes and understand the effect on class attributes.
+
+Hands-on practice with normal methods, static methods, and class methods.
+
+This practice helped me understand how Python implements OOP and how to organize code efficiently using classes and objects.
