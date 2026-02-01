@@ -1,4 +1,4 @@
-"""#Object oriented programming
+#Object oriented programming
 # Class : class is a blueprint of an object 
 # object : Instance of class , (anything we make out of class is called object )
 #self : the object is pointing to the self
@@ -223,7 +223,7 @@ class Bank:
         return self.__balance      # access balance
 b1 = Bank(5000)
 print(b1.get_balance())
-"""
+
 #set_marks --> to change the values 
 class Student:
     def __init__(self , marks):
@@ -252,3 +252,4 @@ class Bank:
 b1 = Bank(5000)
 b1.deposit(1000)
 print(b1.get_balance())
+
